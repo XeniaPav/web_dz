@@ -13,7 +13,7 @@ class MyServer(BaseHTTPRequestHandler):
 
     def __get_html_content(self):
         return """
-        <!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -355,6 +355,55 @@ class MyServer(BaseHTTPRequestHandler):
 
         </main>
 
+
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">номер</th>
+                <th scope="col">название товара</th>
+                <th scope="col">цена за штуку</th>
+                <th scope="col">количество</th>
+                <th scope="col">итоговая сумма</th>
+                <th scope="col">статус заказа</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Товар 1</td>
+                <td>$5000</td>
+                <td>87</td>
+                <td>$435000</td>
+                <td><div class="alert alert-success" role="alert">Обработан</div></td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Товар 2</td>
+                <td>$1000</td>
+                <td>98</td>
+                <td>$98000</td>
+                <td><div class="alert alert-primary" role="alert">Новый</div></td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Товар 3</td>
+                <td>$2000</td>
+                <td>115</td>
+                <td>$230000</td>
+                <td><div class="alert alert-warning" role="alert">Обработка</div></td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Товар 4</td>
+                <td>$2000</td>
+                <td>115</td>
+                <td>$230000</td>
+                <td><div class="alert alert-danger" role="alert">Отмена</div></td>
+            </tr>
+            </tbody>
+        </table>
+
+
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
@@ -371,7 +420,7 @@ class MyServer(BaseHTTPRequestHandler):
     })()
 </script>
 </body>
-</html> 
+</html>
         """
     def do_GET(self):
         """ Метод для обработки входящих GET-запросов """
