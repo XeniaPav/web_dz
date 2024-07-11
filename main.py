@@ -54,7 +54,7 @@ class MyServer(BaseHTTPRequestHandler):
             flex-wrap: nowrap;
             height: 100vh;
             height: -webkit-fill-available;
-            max-height: 100vh;
+            max-height: 150vh;
             overflow-x: auto;
             overflow-y: hidden;
         }
@@ -316,7 +316,9 @@ class MyServer(BaseHTTPRequestHandler):
                     </form>
                 </div>
 
-                <p class="d-inline-flex gap-1">
+                <h4 class="text-center">FAQ</h4>
+
+                <p class="text-center">
                     <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
                        aria-expanded="false" aria-controls="multiCollapseExample1">Как купить?</a>
                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
@@ -355,6 +357,7 @@ class MyServer(BaseHTTPRequestHandler):
 
         </main>
 
+        <h4 class="text-center">Заказы</h4>
 
         <table class="table">
             <thead>
